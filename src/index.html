@@ -4,11 +4,50 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, maximum-scale-1.0,minimum-scale=1.0">
   </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+ <body>
+  <div class="contenedorGeneral">
+    <div id="NombrePagina">
+      <h1>AMOR SECRETO</h1>
+      
     </div>
-    <script src="index.js" type="module"></script>
+
+    <div id="Desplazamiento">
+     
+      <input id="despId" type="text" placeholder="DESPLAZAMIENTO">
+    </div>
+
+    <div id="contentDiv">
+      <div>
+        <button id="defaultOpen" class="tablink" onclick="openPage('Cifrado')">Cifrado</button>
+        <button id="btnMenu" class="tablink" onclick="openPage('Descifrado')" >Descifrado</button>
+      </div>
+      <div id="Cifrado" class="tabcontent">
+        <br>
+        <label id="textLabel" for="textCifrar">INGRESA EL TEXTO A CIFRAR</label>
+        <textarea class="textarea" name="" id="textCifrar" cols="100" rows="10"></textarea><br>
+        <label id="textLabel" for="textCifradote">TEXTO CIFRADO</label><br>
+        <textarea class="textarea"readonly="readonly"  name="" id="textCifrado" cols="100" rows="10"></textarea>
+        <button id="btnCifrar">CIFRAR</button>
+        <button id="btnLimpiar" >LIMPIAR</button>
+      </div>
+
+      <div id="Descifrado" class="tabcontent">
+        <br>
+        <label class="textarea"id="textLabel" for="textDescifrar">INGRESA EL TEXTO A DESCIFRAR</label>
+        <textarea name="" id="textDescifrar" cols="100" rows="10"></textarea><br>
+        <label id="textLabel" for="textCifradote">TEXTO DESCIFRADO</label><br>
+        <textarea class="textarea"readonly="readonly"  name="" id="textDescifrado" cols="100" rows="10"></textarea>
+        <button id="btnDescifrar">DESCIFRAR</button>
+        <button id="btnLimpiar2" >LIMPIAR</button>
+      </div>
+    </div>
+ 
+</div>
+
+ 
+<script  src="index.js" ></script>
+    
   </body>
 </html>

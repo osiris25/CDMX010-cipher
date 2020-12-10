@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+/* Style body */
+
+body {
+	background-image: url('./img/CORAZONES.jpg');
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: flex;
+	
+}
+*{
+font-family: 'Graduate', cursive;	
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: #D2CBCB;
+  color: black;
+  float: center;
+  border:inset ;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1.2vw;
+  width: 25%;
+
+}
+
+#defaultOpen:active {
+  background-color: #cc0000;
+  color: white;
+  font-weight: bolder;
+
+}
+#defaultOpen:focus {
+  background-color: #cc0000;
+  color: white;
+  border-color: #cc0000;
+  font-weight: bolder;
+}
+#btnMenu:active {
+  background-color: #b30000;
+  color: white;
+  font-weight: bolder;
+}
+#btnMenu:focus {
+  background-color: #b30000;
+  color: white;
+  border-color:  #b30000;
+  font-weight: bolder;
+}
+
+
+
+/* Style the tab content*/
+.tabcontent {
+  color: black;
+  display: none;
+  border:solid transparent;
+  width: 90%;
+  
+}
+#contentDiv{
+	width: 70%;
+	margin-left: 60%;
+  	transform: translateX(-60%);
+}
+#Cifrado{
+background-color: #cc0000; 
+}
+
+ #Descifrado{
+	background-color:  #b30000; 
+}
+textarea{	
+	width: 80%;
+	margin-left: 50%;
+  	transform: translateX(-50%);
+  	font-size: 1vw;
+}
+
+label{
+	margin: 35px 0px 0px 35px;	
+	font-size: 1.1vw;
+	font-weight: bolder;
+}
+
+
+#btnCifrar,#btnDescifrar,
+#btnLimpiar,#btnLimpiar2{
+	border-radius: 3px;
+	background-color:  #ffcc00;
+	color: black;
+	border-color: transparent;
+  	float: center;
+  	outline: none;
+  	cursor: pointer;
+  	padding: 10px 12px;
+  	font-size: 1vw;
+  	font-weight: bolder;
+    width: 25%; 
+  	margin-left: 20%;
+  	transform: translateX(-20%);
+  	margin-top: 2%;
+  	margin-bottom: 2%;
+  	overflow: hidden;
+  	transition-duration: 0.4s;
+
+  
+}
+#btnLimpiar,#btnLimpiar2{
+	background-color:  #003cb3;
+}
+#btnCifrar:after,
+#btnDescifrar:after,
+#btnLimpiar:after,
+#btnLimpiar2:after{
+  content: "";
+  background: #a6a6a6;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#btnCifrar:active:after,
+#btnDescifrar:active:after,
+#btnLimpiar:active:after,
+#btnLimpiar:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 2;
+  transition: 0s
+}
+
+#textLabel{
+	font-size:1.1vw;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	color: white;
+}
+
+
+#NombrePagina{
+	width: 100%;
+	color: #e60000; 
+	margin-top: 2%;              
+	font-weight: bold;
+	text-align: center;
+	font-size:2vw;
+	text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+
+}
+#Desplazamiento{
+	margin-bottom: 2%;
+	margin-top: 5%;
+	margin-left: 65%;
+	width: 60%;
+}
+
+input{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 2px;
+	border-color: #b30000;
+	width: 32%;
+	text-align: center;
+	font-size: 1.5vw;
+}
+.contenedorGeneral{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	flex: 0 0 auto;
+}
+
+
+
+
