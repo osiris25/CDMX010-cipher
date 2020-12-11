@@ -1,36 +1,44 @@
+	const cipher = {
+		
+		encode(textCifrar,offset){
+			let msjCifrado="";
+			let textCifrarM=textCifrar.toUpperCase();
+			let desp = parseInt(offset);
 
- const cipher = {
-	 //Aqui van las funciones
-	 wendy:function(){
-	 	return "hola soy Wendy"
-	 }
-	};
-
-export default cipher;
-
-const cipher = {
-	
-	 	encode(textCifrar,offset){
-	 	let msjCifrado="";
-		for(i = 0; i<textCifrar.length; i++){ 
-		let cifrarTexto= textCifrar[i];
-		let textFormula = ((cifrarTexto.charCodeAt() - 65 - offset)%26 + 65);
-		msjCifrado += String.fromCharCode(textFormula);
-		console.log(msjCifrado);
-		}
-		console.log(offset);
-		return msjCifrado;
+			for(let i = 0; i<textCifrarM.length; i++){ 
+				let cifrarTexto= textCifrarM[i];
+				let valor=cifrarTexto.charCodeAt();
+				let textFormula = (( valor - 65 + desp)%26 + 65);
+				if (cifrarTexto < 65 || cifrarTexto > 90) {
+					msjCifrado+=" ";
+				} else {
+					msjCifrado += String.fromCharCode(textFormula);
+				}
+			}
+			
+			return msjCifrado;
 		},	
 		decode(textDescifrar,offset){
-			let msjDescifrado="";
-			for (i = 0; i < textDescifrar.length; i++) {
-				let descifrarTexto=textDescifrar[i];
-				let textFormula=(( descifrarTexto.charCodeAt() - 65 - offset)%26 + 65);
-				msjDescifrado += String.fromCharCode(textFormula);
-				console.log(msjDescifrado);
-					}
-					return msjDescifrado;
-		}
-	
-	  
+			let msjCifrado="";
+			let textDescifrarM=textDescifrar.toUpperCase();
+			let desp = parseInt(offset);
+			for(let i = 0; i<textDescifrarM.length; i++){ 
+				let descifrarTexto= textDescifrarM[i];
+				let valor=descifrarTexto.charCodeAt();
+				let textFormula = (( valor + 65 - desp)%26 + 65);
+				
+				if (descifrarTexto < 65 || descifrarTexto > 90) {
+					msjCifrado+=" ";
+				} else {
+					msjCifrado +=String.fromCharCode(textFormula);
+					
+				}
+			}
+			
+			return msjCifrado;
+		}	
+		
 	};
+
+	export default cipher;
+
